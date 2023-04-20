@@ -1,5 +1,4 @@
 @use 'normalize';
-
-* {
-  box-sizing: border-box;
-}
+@use 'layout';
+@use 'modules';
+@use 'typography';
