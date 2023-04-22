@@ -1,1 +1,35 @@
 @use 'helpers' as *;
+
+.heading {
+  font-family: $heading-font;
+  margin: 5px 0 10px;
+
+  &--h1 {
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 63px;
+  }
+
+  &--h2 {
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    line-height: 52px;
+  }
+}
+
+.subtitle {
+  color: $secondary-color;
+  font-weight: 600;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+
+.description {
+  margin-bottom: 20px;
+  max-width: 470px;
+
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+  }
+}

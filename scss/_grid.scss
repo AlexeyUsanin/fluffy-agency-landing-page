@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  @include flex-box(row, initial, 30, true)
+}
+
+.col {
+  flex: 1;
+  min-width: 300px;
+}
+
+.justify-between {
+  @include flex-box(row, space-between)
+}
+
+.align-center {
+  align-items: center;
+}
+
+.wrap-reverse-tablet {
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap-reverse;
+  }
+}

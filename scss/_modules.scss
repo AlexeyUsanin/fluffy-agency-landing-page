@@ -2,10 +2,38 @@
 
 .btn {
   border-radius: 3px;
-  background-color: $primary-color;
+  background-color: #FF7F57;
+  padding: 19px 42px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
   @include box-shadow(0px, 30px, 30px);
+
+  @media screen and (max-width: 768px) {
+    padding: 12px 32px;
+    font-size: 15px;
+  }
 
   &--secondary {
     @include box-shadow(10px, 0, 10px, rgba(0, 0, 0, 0.5));
   }
 }
+
+
+.nav {
+  &__list {
+    display: flex;
+    @include flex-box(row, initial, 50);
+    list-style: none;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $dark-color;
+    font-weight: 600;
+  }
+}
+

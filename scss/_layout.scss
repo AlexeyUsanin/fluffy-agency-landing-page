@@ -1,1 +1,26 @@
 @use 'helpers' as *;
+
+.header {
+  padding: 40px 0 20px;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  top: 0;
+  background-color: rgba($light-blue, 0.75);
+}
+
+.section {
+  padding: 100px 0;
+
+  &:first-child {
+    @include padding-y(250);
+
+    @media screen and (max-width: 576px) {
+      @include padding-y(150);
+    }
+  }
+
+  &--light-blue {
+    background-color: $light-blue;
+  }
+}
