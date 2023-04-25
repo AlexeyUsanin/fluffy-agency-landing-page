@@ -10,16 +10,22 @@
 <body>
   <header class="header">
     <div class="container">
-      <div class="row justify-between">
+      <div class="row justify-between align-center">
         <a href="">
           <img src="images/logo.svg" alt="Logo">
         </a>
-          <nav class="nav">
+          <nav class="nav" id="myTopnav">
             <ul class="nav__list">
               <li class="nav__list-item"><a class="nav__link" href="">Services</a></li>
               <li class="nav__list-item"><a class="nav__link" href="">About</a></li>
               <li class="nav__list-item"><a class="nav__link" href="">Contact</a></li>
             </ul>
+
+            <button onclick="myFunction()" class="burger-menu">
+              <span class="burger-menu__line"></span>
+              <span class="burger-menu__line"></span>
+              <span class="burger-menu__line"></span>
+            </button>
           </nav>
       </div>
     </div>
@@ -46,18 +52,15 @@
 
 
 
-
-
-
-
-  <button class="btn">
-    Get Your Free Consultation Now
-  </button>
-
-
-  <button class="btn btn--secondary">
-    Get Your Free Consultation Now
-  </button>
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
 </body>
 </html>
