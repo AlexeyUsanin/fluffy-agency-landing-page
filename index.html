@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row justify-between align-center">
         <a href="">
-          <img src="images/logo.svg" alt="Logo">
+          <img src="images/logo-minify.svg" alt="Logo">
         </a>
           <nav class="nav" id="myTopnav">
             <ul class="nav__list">
@@ -43,18 +43,31 @@
             </button>
           </div>
           <div class="col">
-            <img src="images/illustration.svg" alt="illustration">
+            <img src="images/illustration-minify.svg" alt="illustration">
           </div>
         </div>
       </div>
     </section>
+    <div class="section">
+      <div class="container">
+        <div class="row align-center">
+          <div class="col">
+            <h2 class="heading heading--h2">Please Relax, we will do the work.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis nisl vulputate justo consequat tempor. Nam gravida sed ipsum in pellentesque. Cras pellentesque placerat cursus.</p>
+          </div>
+          <div class="col">
+            <img src="images/image-relaxing.png" srcset="images/image-relaxing@2x.png 1400w, images/image-relaxing@3x.png 1920w" alt="relaxing">
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
 
 
   <script>
     function myFunction() {
-      var x = document.getElementById("myTopnav");
+      const x = document.getElementById("myTopnav");
       if (x.className === "nav") {
         x.className += " responsive";
       } else {
