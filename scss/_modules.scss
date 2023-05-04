@@ -108,3 +108,25 @@
     }
   }
 }
+
+.bg-img {
+  // background: url(../images/image-relaxing.png) no-repeat center/cover;
+  min-height: 400px;
+  background-image: image-set(
+    url(../images/image-relaxing.png) 1x,
+    url(../images/image-relaxing@2x.png) 2x,
+    url(../images/image-relaxing@3x.png) 3x,
+  );
+
+  // @media screen and (min-width: 1400px) {
+  //   background: url(../images/image-relaxing@2x.png) no-repeat center/cover;
+  // }
+
+  // @media screen and (min-width: 1920px) {
+  //   background: url(../images/image-relaxing@3x.png) no-repeat center/cover;
+  // }
+
+  // @media screen and (min-resolution: 2x) {
+  //   background: url(../images/image-relaxing@2x.png) no-repeat center/cover;
+  // }
+}
