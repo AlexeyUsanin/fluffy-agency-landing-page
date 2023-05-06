@@ -2,7 +2,7 @@
 
 .btn {
   border-radius: 3px;
-  background-color: #FF7F57;
+  background-color: $primary-color;
   padding: 19px 42px;
   font-weight: 600;
   font-size: 17px;
@@ -10,7 +10,26 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  @include box-shadow(0px, 30px, 30px);
+  // @include box-shadow(0px, 30px, 30px);
+  // transition-property: all;
+  // transition-duration: 0.75s;
+  // transition-delay: 0.5s;
+  // transition-timing-function: ease;
+  // transition: all 0.75s ease 0.5s;
+
+
+  animation-name: box-shadow, background-color;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  &:hover {
+    // transform: scale(1.1);
+    // background-color: darken($primary-color, 20%);
+    animation-play-state: paused;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 12px 32px;
@@ -105,6 +124,28 @@
     &__list {
       // opacity: 1;
       transform: translate(0, 0);
+
+      &-item {
+        position: relative;
+        animation-name: moveX;
+        animation-fill-mode: backwards;
+
+
+        &:first-child {
+          animation-delay: 1.5s;
+          animation-duration: 1.75s;
+        }
+
+        &:nth-child(2) {
+          animation-delay: 2s;
+          animation-duration: 1.5s;
+        }
+
+        &:last-child {
+          animation-delay: 2.5s;
+          animation-duration: 1.25s;
+        }
+      }
     }
   }
 }
